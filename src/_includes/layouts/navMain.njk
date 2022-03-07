@@ -1,0 +1,9 @@
+<nav id="main-nav" uk-navbar class="uk-navbar-container">
+    <ul class="uk-navbar-nav">
+        {% for item in navMain %}
+        <li class="">
+            <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
