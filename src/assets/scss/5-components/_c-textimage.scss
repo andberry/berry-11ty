@@ -1,0 +1,74 @@
+.c-textimage {
+    .c-textimage__image,
+    .c-textimage__content {
+        @include grid-cell-span(2);
+    }
+
+    @include mq(md) {
+        .c-textimage__image,
+        .c-textimage__content {
+            @include grid-cell-span(6)
+        }
+    }
+
+    @include mq(xxl) {
+        .c-textimage__image {
+            @include grid-cell-span(7)
+        }
+        .c-textimage__content {
+            @include grid-cell-span(6)
+        }
+    }
+
+    &.c-textimage--ileft {
+        .c-textimage__image {
+            @include mq(md) {
+                order: 1;
+            }
+        }
+
+        .c-textimage__content {
+
+            @include mq(md) {
+                order: 2;
+                padding-right: $grid_col_gap;
+            }
+
+            @include mq(lg) {
+                padding-right: math.div($grid_col_gap, 2);
+            }
+
+            @include mq(xxl) {
+                padding-right: 0px;
+            }
+        }
+    }
+
+    &.c-textimage--iright {
+        @include mq(xxl) {
+            .c-textimage__content {
+                @include grid-cell-span(6, 2);
+            }
+        }
+
+        .c-textimage__content {
+            @include mq(md) {
+                padding-left: $grid_col_gap;
+            }
+
+            @include mq(lg) {
+                padding-left: math.div($grid_col_gap, 2);
+            }
+
+            @include mq(xxl) {
+                padding-left: 0px;
+            }
+        }
+    }
+}
+
+.c-textimage__container {
+    @include mq(md){
+        align-items: center;
+    }
+}

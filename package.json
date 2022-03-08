@@ -34,5 +34,9 @@
     "sass": "^1.49.9",
     "vinyl-source-stream": "^2.0.0"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "sanitize.css": "^13.0.0",
+    "sass-mq": "^6.0.0"
+  }
 }

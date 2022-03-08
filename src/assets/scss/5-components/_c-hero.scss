@@ -1,0 +1,39 @@
+.c-hero {
+    @include bg-image();
+    @include py($space_4xl);
+    position: relative;
+
+    @include mq(md) {
+        height: 40vh;
+        min-height: 300px;
+        @include py(0);
+        display: flex;
+        align-items: center;
+    }
+}
+
+.c-hero__overlay {
+    @include abs-fill();
+    background: rgba($color_black0, 0.5);
+    z-index: $zindex_10;
+}
+
+.c-hero__content__inner {
+    @include grid-cell(2, 6);
+}
+
+.c-hero__title {
+    @include fs2();
+    color: $color_white;
+}
+
+.c-hero__content {
+    width: 100%;
+    position: relative;
+    z-index: $zindex_100;
+    color: $color_white;
+}
+
+.c-hero__cta {
+    margin-top: $space_m;
+}

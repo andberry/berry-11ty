@@ -1,0 +1,61 @@
+/*
+    Text Style: Base
+*/
+@mixin ts-base() {
+    font-family: $font_family_1;
+    @include responsive-property("font-size", $font_size_base);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@mixin ts-headlines-commons {
+    font-family: $font_family_2;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: $space_xs;
+    margin-top: $space_xl;
+
+    @include mq(lg) {
+        margin-bottom: $space_s;
+        margin-top: $space_3xl;
+    }
+
+    &:first-child {
+        margin-top: 0px;
+    }
+}
+
+
+
+/*
+    Font size mixins
+*/
+@mixin fs1() {
+    @include responsive-property("font-size", $font_size_1);
+    // font-size: $font_size_fluid_1;
+}
+
+@mixin fs2() {
+    @include responsive-property("font-size", $font_size_2);
+    // font-size: $font_size_fluid_2;
+}
+
+@mixin fs3() {
+    @include responsive-property("font-size", $font_size_3);
+    // font-size: $font_size_fluid_3;
+}
+
+@mixin fs4() {
+    @include responsive-property("font-size", $font_size_4);
+    // font-size: $font_size_fluid_4;
+}
+
+@mixin fs5() {
+    @include responsive-property("font-size", $font_size_5);
+    // font-size: $font_size_fluid_5;
+}
+
+@mixin fs6() {
+    @include responsive-property("font-size", $font_size_6);
+    // font-size: $font_size_fluid_6;
+}

@@ -1,0 +1,23 @@
+.u-show-on-desktop {
+    @include mq($until: lg) {
+        display: none !important;
+    }
+}
+
+.u-hide-on-desktop {
+    @include mq(lg) {
+        display: none !important;
+    }
+}
+
+.u-show-on-mobile {
+    @include mq(lg) {
+        display: none !important;
+    }
+}
+
+.u-hide-on-mobile {
+    @include mq($until: lg) {
+        display: none !important;
+    }
+}

@@ -1,0 +1,152 @@
+/*
+    Spacings classes based on $spacings
+*/
+
+
+
+/*
+  No padding classes
+*/
+.px-no {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+/*
+  Generate padding classes looking at settings variables
+*/
+@each $name, $val in $spacings {
+
+    // Vertical margins
+    .my-#{$name}{
+        margin-top: $val;
+        margin-bottom: $val;
+    }
+
+    .mt-#{$name}{
+        margin-top: $val;
+    }
+
+    .mb-#{$name}{
+        margin-bottom: $val;
+    }
+
+
+    // Horizontal margins
+    .mx-#{$name}{
+        margin-left: $val;
+        margin-right: $val;
+    }
+
+    .ml-#{$name}{
+        margin-left: $val;
+    }
+
+    .mr-#{$name}{
+        margin-right: $val;
+    }
+
+
+    // Vertiical padding
+    .py-#{$name}{
+        padding-top: $val;
+        padding-bottom: $val;
+    }
+
+    .pt-#{$name}{
+        padding-top: $val;
+    }
+
+    .pb-#{$name}{
+        padding-bottom: $val;
+    }
+
+
+    // Horizontal padding
+    .px-#{$name}{
+        padding-left: $val;
+        padding-right: $val;
+    }
+
+    .pl-#{$name}{
+        padding-left: $val;
+    }
+
+    .pr-#{$name}{
+        padding-right: $val;
+    }
+}
+
+
+
+/*
+    Responsive variants
+    Width classes: per breakpoints
+*/
+@each $breakpointName, $breakpointValue in $mq-breakpoints{
+    @each $name, $val in $spacings {
+        @include mq($breakpointName){
+
+            // Vertical margins
+            .#{$breakpointName}\:my-#{$name} {
+                margin-top: $val;
+                margin-bottom: $val;
+            }
+
+            .#{$breakpointName}\:mt-#{$name} {
+                margin-top: $val;
+            }
+
+            .#{$breakpointName}\:mb-#{$name} {
+                margin-bottom: $val;
+            }
+
+
+            // Horizontal margins
+            .#{$breakpointName}\:mx-#{$name} {
+                margin-left: $val;
+                margin-right: $val;
+            }
+
+            .#{$breakpointName}\:ml-#{$name} {
+                margin-left: $val;
+            }
+
+            .#{$breakpointName}\:mr-#{$name} {
+                margin-right: $val;
+            }
+
+
+            // Vertical padding
+            .#{$breakpointName}\:py-#{$name} {
+                padding-top: $val;
+                padding-bottom: $val;
+            }
+
+            .#{$breakpointName}\:pt-#{$name} {
+                padding-top: $val;
+            }
+
+            .#{$breakpointName}\:pb-#{$name} {
+                padding-bottom: $val;
+            }
+
+
+            // Horizontal padding
+            .#{$breakpointName}\:px-#{$name} {
+                padding-left: $val;
+                padding-right: $val;
+            }
+
+            .#{$breakpointName}\:pl-#{$name} {
+                padding-left: $val;
+            }
+
+            .#{$breakpointName}\:pr-#{$name} {
+                padding-right: $val;
+            }
+        }
+    }
+}

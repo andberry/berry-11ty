@@ -1,0 +1,157 @@
+/*
+  Define grid container
+
+  Params:
+    - numbers of columns
+    - columns gap
+    - rows gap
+*/
+@mixin grid(
+    $cols_number: $grid_cols,
+    $col_gap: $grid_col_gap,
+    $row_gap: $grid_row_gap
+) {
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    gap: $row_gap $col_gap;
+
+    @include mq(md) {
+        grid-template-columns: repeat($cols_number, minmax(0, 1fr));
+        gap: $row_gap $col_gap;
+    }
+}
+
+
+
+/*
+    Super grid:
+    a grid that above container max width behaves as it was in a container,
+    useful for layout with some elements that touch viewport edges and others one in grid,
+    aka lombiz block
+*/
+@mixin super-grid(
+    $cols_number: $grid_cols,
+    $max-column-width: $max-column-width
+) {
+    @include grid();
+
+    @include mq(xxl) {
+        grid-template-columns: 1fr repeat($cols_number, $max-column-width) 1fr;
+        overflow-x: hidden;
+    }
+}
+
+
+
+/*
+  Define a grid cell using lines
+
+  Params:
+    - col start
+    - col end
+    - row start
+    - row end
+*/
+@mixin grid-cell-lines(
+    $col_start: 0,
+    $col_end: $grid_cols,
+    $row_start: null,
+    $row_end: null
+) {
+
+    grid-column: #{$col_start} / #{$col_end};
+
+    @if $row_start and $row_end {
+        grid-row: $row_start $row_end;
+    }
+}
+
+
+
+/*
+  Define a grid cell using span (size)
+
+  Params:
+      - col_start
+      - size
+*/
+@mixin grid-cell-span(
+    $size: $grid_cols,
+    $col_start: null
+) {
+
+    @if $col_start {
+        grid-column: $col_start / span $size;
+    } @else {
+        grid-column: span $size;
+    }
+}
+
+
+
+/*
+    Shortcut for grid cell with params
+*/
+@mixin grid-cell(
+    $mobile: 2,
+    $md: 12,
+    $lg: null,
+    $xl: null,
+    $xxl: null,
+) {
+    @include grid-cell-span($mobile);
+
+    @include mq(md) {
+        @include grid-cell-span($md);
+    }
+
+    @if $lg {
+        @include mq(lg) {
+            @include grid-cell-span($lg);
+        }
+    }
+
+    @if $xl {
+        @include mq(xl) {
+            @include grid-cell-span($xl);
+        }
+    }
+
+    @if $xxl {
+        @include mq(xxl) {
+            @include grid-cell-span($xxl);
+        }
+    }
+}
+
+
+
+/*
+    Shortcut for common grid cell implementation: full
+    mobile: span 2
+    md: span 12
+*/
+@mixin grid-cell-full() {
+    @include grid-cell-span(2);
+
+    @include mq(md) {
+        @include grid-cell-span(12);
+    }
+}
+
+
+
+/*
+    Shortcut for common grid cell implementation: half starting from md
+    mobile: span 2
+    md: span 6
+*/
+@mixin grid-cell-half() {
+    @include grid-cell-span(2);
+
+    @include mq(md) {
+        @include grid-cell-span(6);
+    }
+}

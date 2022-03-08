@@ -1,0 +1,134 @@
+/*
+    Base: ground zero styles.
+
+    No classes:
+        - normalize/reset
+        - type selectors
+*/
+/* Normalize/Reset */
+@import 'sanitize.css/sanitize';
+@import 'forms';
+
+
+
+/* Type selector style */
+body {
+    background: $color_white;
+    color: $color_text;
+    @include ts-base();
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: $space_m;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include ts-headlines-commons();
+}
+
+h1{
+    @include fs1();
+}
+
+h2{
+    @include fs2();
+}
+
+h3{
+    @include fs3();
+}
+
+h4{
+    @include fs4();
+}
+
+h5{
+    @include fs5();
+}
+
+h6{
+    @include fs6();
+}
+
+
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+
+
+a {
+    color: $color_primary;
+    text-decoration: underline;
+    transition: $trans_linear_fast;
+
+    &:hover {
+        color: $color_secondary;
+    }
+}
+
+
+
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+ul {
+    @include my($space_s);
+    padding-left: $space_l;
+
+    li {
+        @include py($space_2xs);
+    }
+
+    & + p {
+        margin-top: $space_xl;
+    }
+}
+
+
+
+::selection {
+    color: $color_white;
+    background: $color_primary;
+}
+
+
+
+table {
+    text-align: left;
+    table-layout: fixed;
+
+    tbody {
+        border-top: thin solid darken($color_grey, 8%);
+        border-bottom: thin solid darken($color_grey, 8%);
+        tr:nth-child(odd) {
+            background: $color_grey;
+        }
+    }
+
+    td,
+    th {
+        padding: $space_s $space_m;
+        vertical-align: top;
+    }
+}

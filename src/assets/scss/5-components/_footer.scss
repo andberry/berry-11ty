@@ -1,0 +1,26 @@
+.c-footer {
+
+}
+
+.c-footer-top {
+
+}
+
+.c-footer-main {
+    padding-top: $space_2xl;
+    padding-bottom: $space_3xl;
+
+    .menu {
+        @include menu-base-h();
+    }
+}
+
+
+.c-footer-bottom {
+    background: $color_black0;
+    color: $color_white;
+    font-size: remCalc(14);
+    display: flex;
+    justify-content: center;
+    @include py($space_m);
+}

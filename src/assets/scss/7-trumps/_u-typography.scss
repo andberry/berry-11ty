@@ -1,0 +1,44 @@
+/*
+    Headings style classes
+*/
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    @include ts-headlines-commons();
+}
+
+.h1 {
+    @include fs1();
+}
+
+.h2 {
+    @include fs2();
+}
+
+.h3 {
+    @include fs3();
+}
+
+.h4 {
+    @include fs4();
+}
+
+.h5 {
+    @include fs5();
+}
+
+.h6 {
+    @include fs6();
+}
+
+
+
+/*
+    Text styles classes
+*/
+.ts-base{
+    @include ts-base();
+}

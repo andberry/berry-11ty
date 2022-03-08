@@ -1,0 +1,6 @@
+/*
+    pixels to rems conversion utility function
+*/
+@function remCalc($px, $base: 16) {
+    @return math.div($px, $base) + rem;
+}

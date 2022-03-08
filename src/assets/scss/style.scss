@@ -1,8 +1,18 @@
-body {
-    background: tomato;
+/*
+    ITCSS like scss structure
 
-    section {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-}
+    Files inclusion order is driven by specificity:
+        - first common/general style applyed to large amount of elements
+        - last vey specific style
+*/
+
+/* https://sass-lang.com/documentation/breaking-changes/slash-div */
+@use "sass:math";    
+
+@import './1-settings/settings';
+@import './2-tools/tools';
+@import './3-base/base';
+@import './4-layout/layout';
+@import './5-components/components';
+@import './6-modules/modules';
+@import './7-trumps/trumps';

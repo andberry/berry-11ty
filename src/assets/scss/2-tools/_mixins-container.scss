@@ -1,0 +1,39 @@
+/*
+    Fluid container (as Foundation)
+    max-width: 100% until bigger screens
+*/
+@mixin container() {
+    width: 100%;
+    max-width: $container_fluid_max_width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid_col_gap;
+    padding-right: $grid_col_gap;
+
+    @include mq(lg) {
+        padding-left: math.div($grid_col_gap, 2);
+        padding-right: math.div($grid_col_gap, 2);
+    }
+}
+
+
+
+/*
+    Fixed container (as Bootstrap)
+    max-width per breakpoint (Boootstrap way)
+*/
+/*
+@mixin container-fixed() {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: math.div($grid_col_gap, 2);
+    padding-right: math.div($grid_col_gap, 2);
+
+    @each $breakpointName, $breakpointMaxWidth in $container_fixed_max_widths{
+        @include mq($breakpointName) {
+            max-width: $breakpointMaxWidth;
+        }
+    }
+}
+*/

@@ -1,0 +1,28 @@
+/*
+    Components
+
+    Specific cosmetic elements of UI,
+    first layer that introduce visual styling:
+    buttons, forms, products-list
+
+    Use explicit class names (eg. .products-list)
+*/
+
+
+
+
+
+
+
+
+
+/*
+    Project components
+*/
+@import 'header';
+@import 'footer';
+@import 'menu_mobile_toggle';
+@import 'buttons';
+@import 'c-hero';
+@import 'c-simpletext';
+@import 'c-textimage';

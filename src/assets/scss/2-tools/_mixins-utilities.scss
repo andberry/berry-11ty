@@ -1,0 +1,154 @@
+/*
+    Apply the property, cycling values in map made up of (breakpoint:values)
+*/
+@mixin responsive-property($property, $values_map) {
+    @each $breakpoint, $value in $values_map {
+        @if ($breakpoint == 'sm') {
+            #{$property}: #{$value};
+        } @else {
+            @include mq($breakpoint) {
+                #{$property}: #{$value};
+            }
+        }
+    }
+}
+
+
+
+/*
+    Centering things with position absolute and transform
+*/
+@mixin abs-center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+
+@mixin abs-vertical-center() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@mixin abs-horizontal-center() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/*
+    Fill the container with position absolute
+*/
+@mixin abs-fill() {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*
+    Background image in size cover
+*/
+@mixin bg-image($url: null) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @if $url {
+        background-image: url($url);
+    }
+}
+
+
+
+/*
+    Hover effect for image link: scale image on hover
+    @markup:
+        <a>
+            <img>
+        </a>
+
+    @apply-on <a>
+*/
+@mixin scale-on-hover() {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    img {
+        transform: scale(1);
+        transition: $trans_easeOutCubic_fast;
+        backface-visibility: hidden;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.08);
+        }
+    }
+}
+
+
+
+/*
+    Menu Horizontal Base Style
+    @apply-on: <ul>
+*/
+@mixin menu-base-h() {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+
+    & > li {
+        margin: 0px;
+        padding: 0px;
+
+        & > a {
+            display: block;
+        }
+
+        &:first-child {
+            & > a {
+                padding-left: 0px;
+            }
+        }
+
+        &:last-child {
+            & > a {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+
+
+/*
+    Menu Vertical Base Style
+    @apply-on: <ul>
+*/
+@mixin menu-base-v() {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+
+    & > li {
+        display: block;
+        margin: 0px;
+        padding: 0px;
+
+        & > a {
+            display: inline-block;
+            @include py($space_2xs);
+        }
+    }
+}

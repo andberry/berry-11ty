@@ -1,0 +1,99 @@
+/*
+    Forms elements
+*/
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="file"],
+input[type="date"],
+textarea {
+    width: 100%;
+    height: $form-input_height;
+    line-height: 1;
+    border-radius: $border_radius_small;
+    padding: 0px $space_l;
+    border: thin solid darken($color_grey, 10%);
+    max-width: 100%;
+    transition: $trans_linear_fast;
+    font-size: remCalc(16);
+    background: $color_white;
+    color: $color_black;
+
+    &:active,
+    &:focus {
+        outline: none;
+        box-shadow: $box_shadow;
+    }
+}
+
+
+
+input[type="file"] {
+    height: auto;
+    @include py($space_xs);
+}
+
+
+
+::placeholder {
+    color: $color_primary;
+    opacity: 0.8;
+    font-family: $font_family_1;
+}
+
+
+
+textarea {
+    height: 100px;
+    padding: $space_m $space_m;
+}
+
+
+
+select {
+    width: 100%;
+    height: $form-input_height;
+    padding: 0px $space_2xl 0px $space_l;
+    border: thin solid $color_grey;
+    background: $color_white;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    max-width: 100%;
+    width: 100%;
+    font-size: 1rem;
+    color: rgba($color_primary, 0.8);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+fieldset {
+    border: none;
+    padding: 0px;
+    margin-bottom: $space_xl;
+
+    legend {
+        margin-bottom: $space_xs;
+    }
+
+    .form-item {
+        margin-bottom: $space_xs;
+    }
+}
+
+
+
+input[type="submit"] {
+    @extend .c-button;
+
+    &:focus {
+        outline: none;
+    }
+}

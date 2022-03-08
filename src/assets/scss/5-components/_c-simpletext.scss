@@ -1,0 +1,12 @@
+.c-simpletext {
+  @include py($space_3xl);
+}
+
+.c-simpletext__content {
+    text-align: center;
+    @include grid-cell-span(2);
+
+    @include mq(md) {
+        @include grid-cell-span(6, 4);
+    }
+}

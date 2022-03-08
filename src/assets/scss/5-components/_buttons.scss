@@ -1,0 +1,60 @@
+@mixin button-commons() {
+    display: inline-block;
+    padding: remCalc(16) remCalc(22) remCalc(14) remCalc(22);
+    border-radius: $border_radius_small;
+    text-decoration: none;
+    transition: $trans_linear;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+
+    @include mq(md) {
+        width: auto;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+/*
+  Standard/filled buttons
+*/
+.c-button {
+    @include button-commons();
+    background: $color_primary;
+    color: $color_white;
+
+    &:hover {
+        background: $color_lime;
+        color: $color_primary;
+    }
+}
+
+
+
+/*
+    Callout link
+*/
+.c-callout-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    position: relative;
+
+    line-height: 1;
+    color: $color_primary;
+    transition: $trans_linear_fast;
+    padding: 5px 21px 3px 0px;
+
+    &:hover {
+        color: $color_secondary;
+        transition: $trans_linear;
+    }
+}

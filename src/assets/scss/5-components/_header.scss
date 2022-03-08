@@ -1,0 +1,88 @@
+.c-header {
+    position: relative;
+    background: $color_white;
+    color: $color_black;
+    @include py($space_s);
+
+    .site-logo {
+        display: block;
+
+        img {
+            height: 75px;
+            width: auto;
+        }
+    }
+}
+
+
+
+/*
+    Header top
+*/
+.c-header-top {
+    .l-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* Header top menu */
+    .block-menu >  ul.menu {
+        @include menu-base-h();
+
+        & > li {
+            & > a {
+                padding: $space_2xs $space_s;
+                text-transform: uppercase;
+                font-size: remCalc(14);
+                line-height: 1;
+            }
+        }
+    }
+}
+
+
+
+/*
+    Header main
+*/
+.c-header-main {
+    background: $color_white;
+    padding-top: $space_s;
+
+    .l-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    /* Header main menu */
+    .block-menu > ul.menu {
+        @include mq(lg) {
+            @include menu-base-h();
+
+            & > li {
+                & > a {
+                    padding: $space_xs $space_l;
+
+                    line-height: 1;
+                }
+            }
+
+            /*
+                UIkit navbar dropdown style
+            */
+            .uk-navbar-dropdown-nav {
+                li {
+                    padding: 0px;
+                }
+
+                a {
+                    font-size: remCalc(16);
+                    text-decoration: none;
+                    display: block;
+                    padding: $space_s $space_l;
+                }
+            }
+        }
+    }
+}

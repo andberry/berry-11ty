@@ -1,0 +1,267 @@
+/*
+    Settings:
+        - functions (used sometimes to define values in settings)
+        - Global variables and configuration
+*/
+@import 'functions';
+
+
+/*
+    Breakpoints (sass-mq package)
+*/
+$mq-breakpoints: (
+    md: 768px,
+    lg: 1024px,
+    xl: 1200px,
+    xxl: 1440px,
+    xxxl: 1600px
+);
+
+// viewport/breakpoint debug: comment out in production
+// $mq-show-breakpoints: (md, lg, xl, xxl);
+
+
+
+/*
+    Containers (see _containers.scss), we have 2 options:
+    1) fluid (as Foundation)
+    2) fixed per breakpoint (as Bootstrap)
+*/
+// Fluid container: max-width: 100% until bigger screens
+$container_fluid_max_width: 1440px;
+
+// Fixed container: max-width per breakpoint
+$container_fixed_max_widths: (
+    md: 768px,
+    lg: 1024px,
+    xl: 1200px,
+    xxl: 1440px
+);
+$container_additional_padding_px: 0;
+$container_additional_padding: remCalc(0);
+
+
+
+/*
+    Grid
+*/
+$grid_cols: 12;
+$grid_col_gap: 30px;
+$grid_row_gap: 30px;
+$max-column-width: math.div(($container_fluid_max_width - $grid_col_gap - ($grid_col_gap * 11)), 12);
+
+
+
+/*
+    Spacings/sizes
+*/
+$space_3xs: 0.12rem;
+$space_2xs: 0.25rem;
+$space_xs: 0.5rem;
+$space_s: 0.75rem;
+$space_m: 1rem;
+$space_l: 1.5rem;
+$space_xl: 2rem;
+$space_2xl: 3rem;
+$space_3xl: 4rem;
+$space_35xl: 6rem;
+$space_4xl: 8rem;
+$space_45xl: 10rem;
+$space_5xl: 12rem;
+$space_55xl: 14rem;
+$space_6xl: 16rem;
+
+/* sass map useful to generate classes (_spacing-classes.scss) */
+$spacings: (
+    "2xs": $space_2xs,
+    "xs": $space_xs,
+    "s": $space_s,
+    "m": $space_m,
+    "l": $space_l,
+    "xl": $space_xl,
+    "2xl": $space_2xl,
+    "3xl": $space_3xl,
+    "4xl": $space_4xl
+);
+
+/* forms */
+$form-input_height: 48px;
+
+/* buttons */
+$button_height: 48px;
+
+
+
+/*
+    z-index values
+*/
+$zindex_10: 10;
+$zindex_100: 100;
+$zindex_1000: 1000;
+$zindex_10000: 10000;
+
+
+
+/*
+    Colors
+*/
+$color_white: #fff;
+$color_black: #333;
+$color_black0: #000;
+
+$color_grey: #CCC;
+// $color_green: #09925b;
+// $color_blue: #2f406e;
+$color_violet:  #8700f1;
+$color_lime:  #b8f96a;
+
+$color_primary: $color_violet;
+$color_secondary: $color_lime;
+$color_text: $color_black;
+
+
+
+/* sass map useful to generate classes */
+$colors: (
+    "white": $color_white,
+    "black": $color_black,
+    "black0": $color_black0,
+    "grey": $color_grey,
+    "violet": $color_violet,
+    "lime": $color_lime
+);
+
+
+
+
+/*
+    Typography
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap');
+$font_family_1: 'Open Sans', sans-serif;
+$font_family_2: 'Lato', sans-serif;
+
+
+
+/*
+    Responsive typography: stepped with value per breakpoint map
+    (to be used with responsive-property mixin)
+*/
+$font_size_base: (
+    sm: remCalc(16),
+    lg: remCalc(18)
+);
+
+$font_size_1: (
+    sm: remCalc(36),
+    lg: remCalc(44)
+);
+
+$font_size_2: (
+    sm: remCalc(30),
+    lg: remCalc(36)
+);
+
+$font_size_3: (
+    sm: remCalc(24),
+    lg: remCalc(30)
+);
+
+$font_size_4: (
+    sm: remCalc(22),
+    lg: remCalc(24)
+);
+
+$font_size_5: (
+    sm: remCalc(18),
+    lg: remCalc(22)
+);
+
+$font_size_6: (
+    sm: remCalc(16),
+    lg: remCalc(18)
+);
+
+/*
+    Responsive typography: fluid with clamp
+    Font sizes with clamp to be used directly
+*/
+/*
+$font_size_fluid_1: clamp(#{remCalc(50)}, 4.5vw, #{remCalc(75)});
+$font_size_fluid_2: clamp(#{remCalc(40)}, 4vw, #{remCalc(56)});
+$font_size_fluid_3: clamp(#{remCalc(30)}, 3vw, #{remCalc(42)});
+$font_size_fluid_4: clamp(#{remCalc(22)}, 2.5vw, #{remCalc(31)});
+$font_size_fluid_5: clamp(#{remCalc(18)}, 2vw, #{remCalc(23)});
+*/
+
+
+
+/*
+    Transitions
+*/
+$trans_linear: all 250ms linear;
+$trans_linear_fast: all 100ms linear;
+$trans_easeInOutCubic: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$trans_easeOutCubic: all 450ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$trans_easeOutCubic_fast: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$trans_easeOutCubic_slow: all 600ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$trans_easeOutBack: all 250ms cubic-bezier(.29,1.59,.61,1.35);
+
+$trans_func_easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$trans_func_easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+
+
+
+/*
+  Various
+*/
+$border_radius: 24px;
+$border_radius_small: 4px;
+$border_radius_small2: 8px;
+$slashy_degs: 120deg;
+$box_shadow: 0px 2px 4px 2px rgba(0,0,0,0.1);
+$box_shadow_2: 0px 2px 4px 2px rgba(0,0,0,0.3);
+
+
+
+/*
+    UIkit variables
+*/
+/*
+$animation-duration: 0.3s;
+$animation-fade-duration: 0.8s !default;
+$animation-stroke-duration: 2s !default;
+$animation-kenburns-duration: 6s !default;
+$animation-fast-duration: 0.1s !default;
+$animation-slide-small-translate: 15px;
+$animation-slide-medium-translate: 50px !default;
+
+$navbar-background: transparent;
+$navbar-nav-item-height: 0px;
+$navbar-nav-item-color: $color_text;
+$navbar-nav-item-font-size: remCalc(16);
+$navbar-nav-item-font-family: $font_family_1;
+$navbar-nav-item-active-color: $color_text;
+$navbar-nav-item-hover-color: $color_primary;
+
+$navbar-dropdown-nav-item-color: $color_text;
+$navbar-dropdown-nav-item-hover-color: $color_primary;
+$navbar-dropdown-nav-item-active-color: $color_text;
+
+$dropdown-background: $color_white;
+$dropdown-min-width: 200px;
+$dropdown-padding: $space_m $space_l;
+$dropdown-color: $color_text;
+$dropdown-margin: 0px;
+$dropdown-nav-item-color: tomato;
+$dropdown-nav-item-hover-color: green;
+
+$offcanvas-z-index: $zindex_10000;
+$offcanvas-bar-width: 270px;
+$offcanvas-bar-padding-vertical: $space_m;
+$offcanvas-bar-padding-horizontal: $space_l;
+$offcanvas-bar-background: $color_white;
+
+@import "uikit/src/scss/variables";
+*/
