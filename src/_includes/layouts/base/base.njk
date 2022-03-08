@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
-    <title>Document</title>
+    
+    <title>{% if title %}{{ title }} | {% endif %}{{ globals.websitename }}</title>
 </head>
 <body>
     {% block header %}
         <header id="header">
-            {% include 'layouts/navMain.njk' %}
+            {% include 'layouts/base/navMain.njk' %}
         </header>
     {% endblock %}
 
     <main id="main">
-    {% block main %}
-        This is the main content of the page
-    {% endblock %}
+        {% block main %}{% endblock %}
     </main>
 
     {% block footer %}
         <footer id="footer">
-            FOOTER HERE
+            {% include 'layouts/base/navFooter.njk' %}
         </footer>
     {% endblock %}
 

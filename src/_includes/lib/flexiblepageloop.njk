@@ -1,0 +1,13 @@
+{% if section.data.clayout == 'hero' %}
+    {{ hero(
+        section.data.title,
+        section.data.text)
+    }}
+{% elif section.data.clayout == 'textimage' %}
+    {{ textimage(
+        section.data.title,
+        section.data.text,
+        section.data.image_src,
+        section.data.image_alt)
+    }}
+{% endif %}

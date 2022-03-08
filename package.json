@@ -4,13 +4,34 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "dev": "npx @11ty/eleventy --serve"
+    "build:assets": "gulp build",
+    "build:11ty": "npx @11ty/eleventy",
+    "build": "npm-run-all build:assets build:11ty",
+    "dev:assets": "gulp",
+    "dev:11ty": "npx @11ty/eleventy --serve",
+    "dev": "npm-run-all --parallel dev:assets dev:11ty"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
-  }
+    "@11ty/eleventy": "^1.0.0",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@parcel/transformer-sass": "^2.3.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-rollup-lightweight": "^1.0.11",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "sass": "^1.49.9",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }

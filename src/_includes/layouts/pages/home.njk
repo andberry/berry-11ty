@@ -1,0 +1,8 @@
+{% extends "layouts/base/base.njk" %}
+{% from 'lib/macros.njk' import hero, textimage %}
+
+{% block main %}
+    {% for section in collections.indexSections | sortCollectionByFilename %}
+        {% include 'lib/flexiblepageloop.njk' %}
+    {% endfor %}
+{% endblock %}
