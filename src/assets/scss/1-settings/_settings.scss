@@ -108,15 +108,17 @@ $zindex_10000: 10000;
 $color_white: #fff;
 $color_black: #333;
 $color_black0: #000;
-
 $color_grey: #CCC;
-// $color_green: #09925b;
-// $color_blue: #2f406e;
-$color_violet:  #8700f1;
-$color_lime:  #b8f96a;
 
-$color_primary: $color_violet;
-$color_secondary: $color_lime;
+$color_blue: rgb(38, 70, 119);
+$color_violet:  darkorchid;
+$color_yellow: gold;
+$color_green: MediumSeaGreen;
+$color_red: orangered;
+$color_salmon: lightsalmon;
+
+$color_primary: $color_blue;
+$color_secondary: $color_violet;
 $color_text: $color_black;
 
 
@@ -127,8 +129,12 @@ $colors: (
     "black": $color_black,
     "black0": $color_black0,
     "grey": $color_grey,
+    "blue": $color_blue,
     "violet": $color_violet,
-    "lime": $color_lime
+    "yellow": $color_yellow,
+    "green": $color_green,
+    "red": $color_red,
+    "salmon": $color_salmon
 );
 
 
@@ -180,6 +186,20 @@ $font_size_5: (
 $font_size_6: (
     sm: remCalc(16),
     lg: remCalc(18)
+);
+
+$font_size_section_title: (
+    sm: remCalc(16),
+    lg: remCalc(18)
+);
+
+$font_size_section_pretitle: (
+    sm: remCalc(16),
+    lg: remCalc(18)
+);
+
+$font_size_section_name: (
+    sm: remCalc(13)
 );
 
 /*

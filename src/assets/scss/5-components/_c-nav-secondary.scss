@@ -1,0 +1,22 @@
+.c-nav-secondary {
+    ul {
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            @include px($space_m);
+            
+            a {
+                color: $color_white;
+                text-decoration: underline;
+                font-size: remCalc(14);
+                
+                &:hover {
+                    text-decoration: none;
+                }   
+            }
+        }
+    }
+}

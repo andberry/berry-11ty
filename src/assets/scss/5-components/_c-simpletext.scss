@@ -1,12 +1,28 @@
 .c-simpletext {
-  @include py($space_3xl);
-}
+    @include py($space_3xl);
+  
+  
+  
+    &__content {
+        @include grid-cell-span(2);
 
-.c-simpletext__content {
-    text-align: center;
-    @include grid-cell-span(2);
+        @include mq(md) {
+            @include grid-cell-span(6, 4);
+        }
+    }
 
-    @include mq(md) {
-        @include grid-cell-span(6, 4);
+
+
+    &__pretitle {
+        @include ts-section-name();
+        margin-bottom: $space_s;
+    }
+
+
+
+    &__title {
+        @include ts-section-title();
+        margin-top: 0px;
+        margin-bottom: $space_l;
     }
 }

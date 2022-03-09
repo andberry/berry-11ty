@@ -1,11 +1,9 @@
 @mixin button-commons() {
     display: inline-block;
-    padding: remCalc(16) remCalc(22) remCalc(14) remCalc(22);
+    padding: $space_xs $space_m;
     border-radius: $border_radius_small;
     text-decoration: none;
     transition: $trans_linear;
-    text-transform: uppercase;
-    font-weight: 700;
     line-height: 1;
     font-size: 1rem;
     border: none;
@@ -27,12 +25,12 @@
 */
 .c-button {
     @include button-commons();
-    background: $color_primary;
-    color: $color_white;
+    background: $color_green;
+    color: $color_blue;
 
     &:hover {
-        background: $color_lime;
-        color: $color_primary;
+        background: $color_blue;
+        color: $color_green;
     }
 }
 
