@@ -4,71 +4,39 @@
         @include grid-cell-span(2);
     }
 
-    @include mq(md) {
-        .c-textimage__image,
+    
+    &.c-textimage--il {
         .c-textimage__content {
-            @include grid-cell-span(6)
-        }
-    }
-
-    @include mq(xxl) {
-        .c-textimage__image {
-            @include grid-cell-span(7)
-        }
-        .c-textimage__content {
-            @include grid-cell-span(6)
-        }
-    }
-
-    &.c-textimage--ileft {
-        .c-textimage__image {
             @include mq(md) {
-                order: 1;
-            }
-        }
-
-        .c-textimage__content {
-
-            @include mq(md) {
+                @include grid-cell-span(6, 7);
                 order: 2;
-                padding-right: $grid_col_gap;
             }
+        }
 
-            @include mq(lg) {
-                padding-right: math.div($grid_col_gap, 2);
-            }
-
-            @include mq(xxl) {
-                padding-right: 0px;
-            }
+        .c-textimage__image {
+            @include grid-cell-span(5, 1);
+            order: 1;
+            mask-image: url('/assets/images/hero-mask.svg');
+            mask-size: auto 130%;
+            mask-position: 0% 30%;
+            mask-repeat: no-repeat;
         }
     }
 
-    &.c-textimage--iright {
-        @include mq(xxl) {
-            .c-textimage__content {
-                @include grid-cell-span(6, 2);
-            }
-        }
-
+    &.c-textimage--ir {
         .c-textimage__content {
             @include mq(md) {
-                padding-left: $grid_col_gap;
+                @include grid-cell-span(5, 3);
             }
+        }
 
-            @include mq(lg) {
-                padding-left: math.div($grid_col_gap, 2);
-            }
-
-            @include mq(xxl) {
-                padding-left: 0px;
-            }
+        .c-textimage__image {
+            @include grid-cell-span(7, 8);
+            mask-image: url('/assets/images/hero-mask.svg');
+            mask-size: auto 140%;
+            mask-position: -200% 50%;
+            mask-repeat: no-repeat;
         }
     }
 }
 
-.c-textimage__container {
-    @include mq(md){
-        align-items: center;
-    }
-}

@@ -1,39 +1,48 @@
 .c-hero {
     @include bg-image();
+    background-color: $color_white;
     @include py($space_4xl);
     position: relative;
 
     @include mq(md) {
-        height: 40vh;
-        min-height: 300px;
+        height: 100vh;
+        min-height: 600px;
         @include py(0);
         display: flex;
         align-items: center;
     }
-}
 
-.c-hero__overlay {
-    @include abs-fill();
-    background: rgba($color_black0, 0.5);
-    z-index: $zindex_10;
-}
 
-.c-hero__content__inner {
-    @include grid-cell(2, 6);
-}
 
-.c-hero__title {
-    @include fs2();
-    color: $color_white;
-}
+    &__bg {
+        @include abs-fill();
+        @include bg-image();
+        mask-image: url('/assets/images/hero-mask.svg');
+        mask-size: 1600px auto;
+        mask-position: 500px 70%;
+        mask-repeat: no-repeat;
+    }
 
-.c-hero__content {
-    width: 100%;
-    position: relative;
-    z-index: $zindex_100;
-    color: $color_white;
-}
 
-.c-hero__cta {
-    margin-top: $space_m;
+
+    &__content {
+        width: 100%;
+        position: relative;
+        z-index: $zindex_100;
+        color: $color_blue;
+        @include grid-cell(2, 4);
+    }
+
+
+    &__title {
+        @include fs2();
+        margin: 0px;
+    }
+    
+    
+    
+    &__subtitle {
+        @include fs3();
+        margin: 0px;
+    }
 }

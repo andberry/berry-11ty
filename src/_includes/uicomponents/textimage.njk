@@ -1,12 +1,10 @@
-<section class="c-textimage" style="background-color: rebeccapurple; color: white;">
-    <div class="uk-container uk-flex uk-flex-middle">
-        <div class="c-textimage__content uk-width-1-2">
-            {% if title %}
-                <h2 style="color: white;">{{ title }}</h2>
-            {% endif %}
+<section class="c-textimage c-textimage--i{{imageside}}" id="{{ id }}">
+    <div class="l-grid--super">
+        <div class="c-textimage__content">
+            <h2 style="color: white;">{{ title }}</h2>
             <div class="c-textimage__text">{{ text }}</div>
         </div>
-        <div class="c-textimage__image uk-width-1-2">
+        <div class="c-textimage__image">
             <img src="{{ image_src }}" alt="{{ image_alt }}" width="640" height="480">
         </div>
     </div>
