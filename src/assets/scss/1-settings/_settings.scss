@@ -112,10 +112,6 @@ $color_grey: #CCC;
 
 $color_blue: rgb(38, 70, 119);
 $color_violet:  darkorchid;
-$color_yellow: gold;
-$color_green: MediumSeaGreen;
-$color_red: orangered;
-$color_salmon: lightsalmon;
 
 $color_primary: $color_blue;
 $color_secondary: $color_violet;
@@ -130,11 +126,7 @@ $colors: (
     "black0": $color_black0,
     "grey": $color_grey,
     "blue": $color_blue,
-    "violet": $color_violet,
-    "yellow": $color_yellow,
-    "green": $color_green,
-    "red": $color_red,
-    "salmon": $color_salmon
+    "violet": $color_violet
 );
 
 

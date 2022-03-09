@@ -25,12 +25,12 @@
 */
 .c-button {
     @include button-commons();
-    background: $color_green;
-    color: $color_blue;
+    background: $color_primary;
+    color: $color_secondary;
 
     &:hover {
-        background: $color_blue;
-        color: $color_green;
+        background: $color_secondary;
+        color: $color_primary;
     }
 }
 

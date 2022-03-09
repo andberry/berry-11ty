@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="/assets/style.min.css" />
     
     <title>{% if title %}{{ title }} | {% endif %}{{ globals.websitename }}</title>
@@ -17,7 +16,7 @@
                     {% include 'layouts/base/navMain.njk' %}
                 </div>
                 <div class="c-header__right">
-                    {% include 'layouts/base/navSecondary.njk' %}
+                    
                 </div>
             </div>
         </header>
@@ -29,11 +28,10 @@
 
     {% block footer %}
         <footer id="footer">
-            {% include 'layouts/base/navFooter.njk' %}
+            
         </footer>
     {% endblock %}
 
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
     <script src="/assets/app.min.js"></script>
 </body>
 </html>
