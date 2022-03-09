@@ -1,8 +1,8 @@
-<nav id="main-nav" uk-navbar class="uk-navbar-container">
-    <ul class="uk-navbar-nav">
+<nav id="main-nav" uk-navbar class="c-nav-main">
+    <ul>
         {% for item in navMain %}
         <li class="">
-            <a href="{{ item.url }}">{{ item.text }}</a>
+            <a href="{{ item.url }}" class="{{ item.class }}">{{ item.text }}</a>
         </li>
         {% endfor %}
     </ul>

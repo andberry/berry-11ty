@@ -1,6 +1,8 @@
 {
     "websitename": "CNS",
-    "fullPlanDownloadUrl": "/download",
+    "fullPlanDownloadUrl": "/download/",
+    "frUrl": "/fr",
+    "frLabel": "Français",
     "socials": {
         "Facebook": "https://www.facebook.com/",
         "Twitter": "https://www.twitter.com/",

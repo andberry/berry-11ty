@@ -1,13 +1,26 @@
+{% from 'lib/macros.njk' import hero, textimage, simpletext %}
+
 {% if section.data.clayout == 'hero' %}
     {{ hero(
+        section.data.id,
+        section.data.bgimage,
         section.data.title,
         section.data.text)
     }}
 {% elif section.data.clayout == 'textimage' %}
     {{ textimage(
+        section.data.id,
         section.data.title,
         section.data.text,
         section.data.image_src,
-        section.data.image_alt)
+        section.data.image_alt,
+        section.data.imageside)
+    }}
+{% elif section.data.clayout == 'simpletext' %}
+    {{ simpletext(
+        section.data.id,
+        section.data.pretitle,
+        section.data.title,
+        section.templateContent)
     }}
 {% endif %}

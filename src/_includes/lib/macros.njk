@@ -1,7 +1,11 @@
-{% macro hero(title, text) %}
+{% macro hero(id, bgimage, title, subtitle) %}
     {% include 'uicomponents/hero.njk' %}
 {% endmacro %}
 
-{% macro textimage(title, text, image_src, image_alt) %}
+{% macro textimage(id, title, text, image_src, image_alt, imageside='r') %}
     {% include 'uicomponents/textimage.njk' %}
+{% endmacro %}
+
+{% macro simpletext(id, pretitle, title, text) %}
+    {% include 'uicomponents/simpletext.njk' %}
 {% endmacro %}

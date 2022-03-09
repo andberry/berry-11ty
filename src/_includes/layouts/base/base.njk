@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="/assets/style.min.css" />
     
     <title>{% if title %}{{ title }} | {% endif %}{{ globals.websitename }}</title>
 </head>
 <body>
     {% block header %}
-        <header id="header">
-            {% include 'layouts/base/navMain.njk' %}
+        <header id="header" class="c-header">
+            <div class="l-container c-header__inner">
+                <div class="c-header__left">
+                    {% include 'layouts/base/navMain.njk' %}
+                </div>
+                <div class="c-header__right">
+                    {% include 'layouts/base/navSecondary.njk' %}
+                </div>
+            </div>
         </header>
     {% endblock %}
 
@@ -25,8 +33,7 @@
         </footer>
     {% endblock %}
 
-    <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
+    <script src="/assets/app.min.js"></script>
 </body>
 </html>
