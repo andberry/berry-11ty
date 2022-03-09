@@ -1,5 +1,7 @@
 ---
 clayout: hero
-title: Hero 1 Title
-text: Hero 1 Text
+bgimage: 'https://placeimg.com/1600/600/nature'
+title: Action for Health NS
+text: Better healthcare begins now
+id: hero
 ---
