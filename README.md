@@ -1,1 +1,1 @@
-# berry-11ty repo
+# Eleventy (11ty) playground with multi-sections landing pages setup, and Frontend workflow (Scss, JS es6+) implemented with gulp 

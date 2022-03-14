@@ -1,14 +1,16 @@
 <section class="c-hero" id="{{ id }}">
     <div class="c-hero__bg" style="background-image: url('{{ bgimage }}');"></div>
-    <div class="l-container l-grid">
-        <div class="c-hero__content">
-            {% if title %}
-                <h2 class="c-hero__title">{{ title }}</h2>
-            {% endif %}
+    <div class="c-hero__content">
+        <div class="l-container l-grid">
+            <div class="c-hero__content-inner">
+                {% if title %}
+                    <h2 class="c-hero__title">{{ title }}</h2>
+                {% endif %}
 
-            {% if subtitle %}
-                <h3 class="c-hero__subtitle">{{ subtitle }}</h3>
-            {% endif %}
+                {% if subtitle %}
+                    <h3 class="c-hero__subtitle">{{ subtitle }}</h3>
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>

@@ -1,0 +1,63 @@
+.c-textimage {
+    @include py($space_2xl);
+
+    @include mq(xl) {
+        @include py($space_4xl);
+    }
+
+    
+    
+    .c-textimage__image,
+    .c-textimage__content {
+        @include grid-cell-span(2);
+    }
+
+    
+    
+    & > .l-grid {
+        align-items: center;
+    }
+    
+    
+    
+    &.c-textimage--il {
+        .c-textimage__content {
+            @include mq(md) {
+                @include grid-cell-span(6, 7);
+                order: 2;
+            }
+        }
+
+        .c-textimage__image {
+            @include grid-cell-span(5, 1);
+            order: 1;
+            mask-image: url('/assets/images/hero-mask.svg');
+            mask-size: auto 130%;
+            mask-position: 0% 30%;
+            mask-repeat: no-repeat;
+        }
+    }
+
+    
+    
+    &.c-textimage--ir {
+        .c-textimage__content {
+            @include mq(md) {
+                @include grid-cell-span(4, 3);
+            }
+        }
+
+        .c-textimage__image {
+            @include grid-cell-span(4, 7);
+        }
+    }
+
+    
+    
+    &__image {
+        img {
+            border-radius: $border_radius;
+        }
+    }
+}
+

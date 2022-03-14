@@ -17,10 +17,13 @@
     &__bg {
         @include abs-fill();
         @include bg-image();
-        mask-image: url('/assets/images/hero-mask.svg');
-        mask-size: 1600px auto;
-        mask-position: 500px 70%;
-        mask-repeat: no-repeat;
+        z-index: $zindex_10;
+        &:after {
+            content: '';
+            @include abs-fill();
+            background: rgba($color_black0, 0.5);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0.95) 100%);
+        }
     }
 
 
@@ -29,20 +32,27 @@
         width: 100%;
         position: relative;
         z-index: $zindex_100;
-        color: $color_blue;
+        text-shadow: 2px 2px 5px $color_black0;
+    }
+
+
+
+    &__content-inner {
         @include grid-cell(2, 4);
     }
 
 
     &__title {
-        @include fs2();
+        @include fs1();
         margin: 0px;
+        color: $color_white;
     }
     
     
     
     &__subtitle {
-        @include fs3();
+        @include fs4();
         margin: 0px;
+        color: $color_white;
     }
 }

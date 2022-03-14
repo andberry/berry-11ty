@@ -1,8 +1,7 @@
 const globals = require('./globals.json');
 
 module.exports = [
-    { "url": "#overview", "text": "Overview" },
-    { "url": "#message-from-the-premier", "text": "Message From The Premier" },
-    { "url": "#promise-1", "text": "Our Promises" },
-    { "url": globals.fullPlanDownloadUrl, "text": "Full Plan", "class": "c-button" }
+    { "url": "#section1", "text": "Section 1" },
+    { "url": "#section2", "text": "Section 2" },
+    { "url": "#section3", "text": "Section 3" }
 ]

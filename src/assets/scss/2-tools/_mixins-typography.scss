@@ -63,7 +63,7 @@
 @mixin ts-section-name() {
     font-family: $font_family_1;
     @include responsive-property("font-size", $font_size_section_name);
-    color: $color_grey;
+    color: $color_black;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -79,7 +79,7 @@
     @include responsive-property("font-size", $font_size_2);
     font-weight: 300;
     line-height: 1.1;
-    color: $color_blue;
+    color: $color_black;
 }
 
 

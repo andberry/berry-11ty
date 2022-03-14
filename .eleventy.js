@@ -1,6 +1,6 @@
 const htmlMinifier = require('html-minifier');
 
-console.log(htmlMinifier);
+
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("sortCollectionByFilename", (c) => {
