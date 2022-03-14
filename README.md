@@ -1,5 +1,5 @@
 # Berry's Eleventy (11ty) playground
 
-Using 11ty to build multi-sections landing pages (aka one page websites).
+Building multi-sections landing pages (aka one page websites) with 11ty.
 
-This includes Frontend workflow setup (Scss, JS es6+) implemented with gulp 
+Includes frontend toolchain setup implemented with Gulp: SCSS compilation (with BEM and ITCSS naming convention and structure), and JavaScript ES6+ transpilation and bundling with Babel and rullup.js.
