@@ -8,7 +8,6 @@ module.exports = function (eleventyConfig) {
             const aNum = parseInt(a.fileSlug.split('-')[0]);
             const bNum = parseInt(b.fileSlug.split('-')[0]);
             return aNum - bNum;
-            // return a.fileSlug.split('-')[0].localeCompare(b.fileSlug.split('-')[0])
         });
     });
     
