@@ -1,5 +1,7 @@
 .c-footer {
-
+    @include py($space_l);
+    background: rebeccapurple;
+    color: $color_white;
 }
 
 .c-footer-top {

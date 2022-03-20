@@ -1,3 +1,4 @@
+{% set globals = globals[lang] if lang else globals['en'] %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
         <header id="header" class="c-header">
             <div class="l-container c-header__inner">
                 <div class="c-header__left">
+                    {{ globals.websitename }}
                     {% include 'layouts/base/navMain.njk' %}
                 </div>
                 <div class="c-header__right">
@@ -28,8 +30,10 @@
     </main>
 
     {% block footer %}
-        <footer id="footer">
-            
+        <footer id="footer" class="c-footer">
+            <div class="l-container">
+                {{ globals.footercopyright }}
+            </div>
         </footer>
     {% endblock %}
 

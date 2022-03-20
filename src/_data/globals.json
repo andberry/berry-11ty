@@ -1,6 +1,7 @@
 {
     "en" : {
         "websitename": "11ty Berry English",
+        "footercopyright": "Foo bar En",
         "socials": {
             "Facebook": "https://www.facebook.com/",
             "Twitter": "https://www.twitter.com/"
@@ -9,6 +10,7 @@
     
     "fr" : {
         "websitename": "11ty Berry French",
+        "footercopyright": "Foo bar Fr",
         "socials": {
             "Facebook": "https://www.facebook.com/fr",
             "Twitter": "https://www.twitter.com/fr"
