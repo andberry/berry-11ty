@@ -1,11 +1,17 @@
 {
-    "websitename": "CNS",
-    "fullPlanDownloadUrl": "/download/",
-    "frUrl": "/fr",
-    "frLabel": "Français",
-    "socials": {
-        "Facebook": "https://www.facebook.com/",
-        "Twitter": "https://www.twitter.com/",
-        "Youtube": "https://www.youtube.com/"
+    "en" : {
+        "websitename": "11ty Berry English",
+        "socials": {
+            "Facebook": "https://www.facebook.com/",
+            "Twitter": "https://www.twitter.com/"
+        }
+    },
+    
+    "fr" : {
+        "websitename": "11ty Berry French",
+        "socials": {
+            "Facebook": "https://www.facebook.com/fr",
+            "Twitter": "https://www.twitter.com/fr"
+        }
     }
 }

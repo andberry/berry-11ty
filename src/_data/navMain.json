@@ -1,0 +1,16 @@
+{
+    "en": [
+        { "url": "#section1", "text": "Section 1 EN" },
+        { "url": "#section2", "text": "Section 2 EN" },
+        { "url": "#section3", "text": "Section 3 EN" },
+        { "url": "#section4", "text": "Section 4 EN" },
+        { "url": "/fr/", "text": "French Version" }
+    ],
+    
+    "fr": [
+        { "url": "#section1", "text": "Section 1 FR" },
+        { "url": "#section2", "text": "Section 2 FR" },
+        { "url": "#section3", "text": "Section 3 FR" },
+        { "url": "/", "text": "English Version" }
+    ]
+}

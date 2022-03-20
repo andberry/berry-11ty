@@ -1,3 +1,5 @@
+{% set navMain = navMain[lang] if lang else navMain['en'] %}
+
 <nav id="main-nav" class="c-nav-main">
     <ul>
         {% for item in navMain %}
