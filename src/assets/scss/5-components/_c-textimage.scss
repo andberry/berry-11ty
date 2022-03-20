@@ -29,12 +29,8 @@
         }
 
         .c-textimage__image {
-            @include grid-cell-span(5, 1);
+            @include grid-cell-span(4, 2);
             order: 1;
-            mask-image: url('/assets/images/hero-mask.svg');
-            mask-size: auto 130%;
-            mask-position: 0% 30%;
-            mask-repeat: no-repeat;
         }
     }
 
